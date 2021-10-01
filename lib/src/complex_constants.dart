@@ -9,13 +9,14 @@ abstract class ComplexConstant implements Complex {
   num get modulus => _modulus;
   num _argument;
   num get argument => _argument;
-  num __mod2;
-  num get _mod2 => __mod2;
+
+  late num __mod2;
+  num get _mod2 => __mod2 ??= math.pow(modulus, 2);
 
 
-  ComplexCartesian __cart;
+  late ComplexCartesian __cart;
   ComplexCartesian get _cart=>__cart;
-  ComplexPolar __polar;
+  late ComplexPolar __polar;
   ComplexPolar get _polar=>__polar;
   String toString()=>_cart.toString();
 

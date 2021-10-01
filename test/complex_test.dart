@@ -2,14 +2,14 @@ import 'package:test/test.dart';
 import 'package:my_complex/my_complex.dart' show Complex;
 import 'dart:math' as math;
 
-List<Complex> listComplexCartesian = new List<Complex>();
-List<Complex> listComplexPolar;
-List<Complex> newListComplexCartesian;
-List<Complex> listComplex=new List<Complex>();
+List<Complex> listComplexCartesian = [];
+late List<Complex> listComplexPolar;
+late List<Complex> newListComplexCartesian;
+List<Complex> listComplex= [];
 
 final int LENGTH=5000;
 final int NUMLOOPS = 1;
-math.Random random;
+late math.Random random;
 
 void main() {
   random = new math.Random(new DateTime.now().millisecondsSinceEpoch);

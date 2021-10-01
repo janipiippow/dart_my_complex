@@ -1,15 +1,13 @@
 part of complex_base;
 
 class ComplexPolar extends Complex {
-  num _argument;
-
+  late num _argument;
   num get argument => _argument;
-  num _modulus;
 
+  late num _modulus;
   num get modulus => _modulus;
 
-  num __mod2;
-
+  num? __mod2;
   num get _mod2 => __mod2 ??= math.pow(modulus, 2);
 
   ComplexPolar(num modulus, num argument) : super._intern() {
@@ -27,8 +25,8 @@ class ComplexPolar extends Complex {
 
   String toString() => "(r:${this.modulus}, θ:${this.argument})";
 
-  double _imaginary;
-  double _real;
+  double? _imaginary;
+  double? _real;
 
   double get imaginary => _imaginary ??= this.modulus * math.sin(this.argument);
 
