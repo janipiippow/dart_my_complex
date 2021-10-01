@@ -10,7 +10,7 @@ abstract class ComplexConstant implements Complex {
   num _argument;
   num get argument => _argument;
 
-  late num __mod2;
+  num? __mod2;
   num get _mod2 => __mod2 ??= math.pow(modulus, 2);
 
 
